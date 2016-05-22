@@ -4,6 +4,13 @@ console.log("hi how are you")
 $('li').click(function(){
 console.log(this);
 var text=$(this).text();
-$('ul').append("<li>"+text+"</li>")
-});
+$('ul').prepend("<li>"+text+"</li>");
+
+})
+
+$('ul').click(function(){
+	$('ul').children().remove();
+})
+
+
 });
