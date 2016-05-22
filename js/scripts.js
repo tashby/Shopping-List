@@ -1,16 +1,17 @@
 $(document).ready(function(){
-console.log("hi how are you")
+	$('li').click(function(){
+		var text=$(this).text();
 
-$('li').click(function(){
-console.log(this);
-var text=$(this).text();
-$('ul').prepend("<li>"+text+"</li>");
+		// TODO: Add a li with an id to target when we need to delete a li from the shopping cart
+		// e.g <li id='+text+'>text</li>
+		
+		$('ul').prepend("<li>"+text+"</li>");
 
-})
+	})
 
-$('ul').click(function(){
-	$('ul').children().remove();
-})
-
-
+	// TODO: Have a function that deletes the clicked item in the cart,
+	// Hint: get the id of the item clicked and remove it that way
+	$('ul').click(function(){
+		$('ul').children().remove();
+	})
 });
